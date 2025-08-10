@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Multilíngue - Rooshlandia Guillaume</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      margin: 0;
+      color: #eee;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #ff6f61, #ffb347);
+      color: black;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    header .logo {
+      font-size: 1.90em;
+      font-weight: 900;
+      font-family: 'arial', cursive;
+      letter-spacing: 0px;
+      cursor:default;
+    }
+    nav a {
+      color: black;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffd9b3;
+    }
+    .language-switcher {
+      display: flex;
+      gap: 15px;
+      margin-left: 20px;
+    }
+    .language-switcher button {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .language-switcher button.active,
+    .language-switcher button:hover {
+      background-color: #ff6f61;
+      border-color: #ff6f61;
+      color: white;
+    }
+    .banner {
+      background: url('https://photos.app.goo.gl/ooKVYPMr8mrCZQN4A') center/cover no-repeat;
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-shadow: 0 0 15px rgba(0,0,0,0.7);
+      text-align: center;
+      padding: 0 20px;
+    }
+    .banner h1 {
+      font-size: 3.8em;
+      margin: 0;
+      font-family: arial, cursive;
+      letter-spacing: 0px;
+      text-transform: uppercase;
+    }
+    .banner p {
+      font-size: 1.4em;
+      margin-top: 15px;
+      max-width: 600px;
+    }
+    .btn-primary {
+      margin-top: 30px;
+      background-color: #ff6f61;
+      padding: 15px 40px;
+      border: none;
+      color: white;
+      font-size: 1.3em;
+      border-radius: 40px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 4px 10px rgba(255,111,97,0.6);
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #ff4b3e;
+      box-shadow: 0 6px 15px rgba(255,75,62,0.8);
+    }
+    main {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 25px;
+      background: #1e1e1e;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255,111,97,0.2);
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    section h2 {
+      color: #ffb347;
+      font-size: 2.3em;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #ff6f61;
+      padding-bottom: 8px;
+      font-weight: 700;
+    }
+    section p {
+      font-size: 1.1em;
+      color: #ddd;
+      max-width: 850px;
+    }
+    /* Grid para portfolio e projetos */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .placeholder {
+      background: #333;
+      border: 2px dashed #ff6f61;
+      height: 150px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ff6f61;
+      font-weight: 600;
+      font-size: 1.1em;
+      cursor: default;
+    }
+    footer {
+      background: linear-gradient(90deg, #ff6f61, #ffb347);
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      margin-top: 40px;
+      user-select: none;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+    }
+    /* Responsivo */
+    @media(max-width: 600px) {
+      .banner h1 {
+        font-size: 2.8em;
+      }
+      .btn-primary {
+        font-size: 1em;
+        padding: 12px 25px;
+      }
+      main {
+        margin: 30px 15px;
+        padding: 15px;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .language-switcher {
+        justify-content: center;
+        margin-top: 15px;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="logo">Rooshlandia Guillaume</div>
+    <nav>
+      <a href="#portfolio" data-lang-content="pt">Portfolio</a>
+      <a href="#projetos" data-lang-content="pt">Projetos</a>
+      <a href="#loja" data-lang-content="pt">Loja</a>
+      <a href="#depoimentos" data-lang-content="pt">Depoimentos</a>
+      <a href="#contato" data-lang-content="pt">Contato</a>
+
+      <a href="#portfolio" data-lang-content="en" style="display:none">Portfolio</a>
+      <a href="#projetos" data-lang-content="en" style="display:none">Projects</a>
+      <a href="#loja" data-lang-content="en" style="display:none">Shop</a>
+      <a href="#depoimentos" data-lang-content="en" style="display:none">Testimonials</a>
+      <a href="#contato" data-lang-content="en" style="display:none">Contact</a>
+
+      <a href="#portfolio" data-lang-content="es" style="display:none">Portafolio</a>
+      <a href="#projetos" data-lang-content="es" style="display:none">Proyectos</a>
+      <a href="#loja" data-lang-content="es" style="display:none">Tienda</a>
+      <a href="#depoimentos" data-lang-content="es" style="display:none">Testimonios</a>
+      <a href="#contato" data-lang-content="es" style="display:none">Contacto</a>
+    </nav>
+    <div class="language-switcher">
+      <button class="active" data-lang="pt">PT</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="es">ES</button>
+    </div>
+  </header>
+
+  <section class="banner">
+    <h1 data-lang-content="pt">Rooshlandia Guillaume</h1>
+    <h1 data-lang-content="en" style="display:none">Rooshlandia Guillaume</h1>
+    <h1 data-lang-content="es" style="display:none">Rooshlandia Guillaume</h1>
+
+    <p data-lang-content="pt">Designer gráfico apaixonada por transformar ideias em artes incríveis e cheias de personalidade.</p>
+    <p data-lang-content="en" style="display:none">Graphic designer passionate about transforming ideas into amazing and unique artworks.</p>
+    <p data-lang-content="es" style="display:none">Diseñadora gráfica apasionada por transformar ideas en obras de arte increíbles y con mucha personalidad.</p>
+
+    <a href="#portfolio" class="btn-primary" data-lang-content="pt">Veja meu trabalho</a>
+    <a href="#portfolio" class="btn-primary" data-lang-content="en" style="display:none">See my work</a>
+    <a href="#portfolio" class="btn-primary" data-lang-content="es" style="display:none">Ver mi trabajo</a>
+  </section>
+
+  <main>
+    <section id="portfolio">
+      <h2 data-lang-content="pt">Portfolio</h2>
+      <h2 data-lang-content="en" style="display:none">Portfolio</h2>
+      <h2 data-lang-content="es" style="display:none">Portafolio</h2>
+      <p data-lang-content="pt">Aqui vou mostrar meus projetos já finalizados, com muita dedicação e criatividade.</p>
+      <p data-lang-content="en" style="display:none">Here I will show my completed projects, with lots of dedication and creativity.</p>
+      <p data-lang-content="es" style="display:none">Aquí mostraré mis proyectos ya terminados, con mucha dedicación y creatividad.</p>
+      <div class="grid">
+        <div class="placeholder">Imagem do projeto 1</div>
+        <div class="placeholder">Imagem do projeto 2</div>
+        <div class="placeholder">Imagem do projeto 3</div>
+        <div class="placeholder">Imagem do projeto 4</div>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <h2 data-lang-content="pt">Projetos em Progresso</h2>
+      <h2 data-lang-content="en" style="display:none">Projects in Progress</h2>
+      <h2 data-lang-content="es" style="display:none">Proyectos en Progreso</h2>
+      <p data-lang-content="pt">Acompanhe as etapas e atualizações dos meus trabalhos em desenvolvimento.</p>
+      <p data-lang-content="en" style="display:none">Follow the stages and updates of my work in progress.</p>
+      <p data-lang-content="es" style="display:none">Sigue las etapas y actualizaciones de mis trabajos en desarrollo.</p>
+      <div class="grid">
+        <div class="placeholder">Atualização 1</div>
+        <div class="placeholder">Atualização 2</div>
+        <div class="placeholder">Atualização 3</div>
+      </div>
+    </section>
+
+    <section id="loja">
+      <h2 data-lang-content="pt">Loja</h2>
+      <h2 data-lang-content="en" style="display:none">Shop</h2>
+      <h2 data-lang-content="es" style="display:none">Tienda</h2>
+      <p data-lang-content="pt">Aqui você pode adquirir artes digitais, logos e templates exclusivos.</p>
+      <p data-lang-content="en" style="display:none">Here you can purchase digital art, logos, and exclusive templates.</p>
+      <p data-lang-content="es" style="display:none">Aquí puedes adquirir arte digital, logos y plantillas exclusivas.</p>
+    </section>
+
+    <section id="depoimentos">
+      <h2 data-lang-content="pt">Depoimentos</h2>
+      <h2 data-lang-content="en" style="display:none">Testimonials</h2>
+      <h2 data-lang-content="es" style="display:none">Testimonios</h2>
+      <p data-lang-content="pt">Veja o que meus clientes dizem sobre meu trabalho e minha dedicação.</p>
+      <p data-lang-content="en" style="display:none">See what my clients say about my work and dedication.</p>
+      <p data-lang-content="es" style="display:none">Mira lo que mis clientes dicen sobre mi trabajo y dedicación.</p>
+    </section>
+
+    <section id="contato">
+      <h2 data-lang-content="pt">Contato</h2>
+      <h2 data-lang-content="en" style="display:none">Contact</h2>
+      <h2 data-lang-content="es" style="display:none">Contacto</h2>
+      <p data-lang-content="pt">Quer trabalhar comigo? Me ligue ou envie mensagem no WhatsApp: <strong>+1 (908) 315-2415</strong></p>
+      <p data-lang-content="en" style="display:none">Want to work with me? Call or send a WhatsApp message: <strong>+1 (908) 315-2415</strong></p>
+      <p data-lang-content="es" style="display:none">¿Quieres trabajar conmigo? Llama o envía un mensaje por WhatsApp: <strong>+1 (908) 315-2415</strong></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Rooshlandia Guillaume — Contato: +1 (908) 315-2415
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.language-switcher button');
+    const contents = document.querySelectorAll('[data-lang-content]');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const lang = button.getAttribute('data-lang');
+
+        contents.forEach(el => {
+          if (el.getAttribute('data-lang-content') === lang) {
+            el.style.display = '';
+          } else {
+            el.style.display = 'none';
+          }
+        });
+
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
